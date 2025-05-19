@@ -33,9 +33,32 @@
         Love Maths
       </h1>
       <section class="game-area">
-        <div class="controls-area"></div>
-        <div class="question-area"></div>
-        <button>Submit Answer</button>
+        <div class="controls-area">
+          <button class="btn btn--big btn--green">
+            <i class="fas fa-plus"></i>
+          </button>
+          <button class="btn btn--big btn--blue">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button class="btn btn--big btn--orange">
+            <i class="fas fa-times"></i>
+          </button>
+          <button class="btn btn--big btn--red">
+            <i class="fas fa-divide"></i>
+          </button>
+        </div>
+        <div class="question-area">
+          <span id="operandi">0</span>
+          <span id="operator">x</span>
+          <span id="operandi2">0</span>
+          <span>=</span>
+          <p class="answer-message">Answer</p>
+          <input
+            type="number"
+            id="answer-box"
+          />
+        </div>
+        <button class="btn btn--gray">Submit Answer</button>
       </section>
       <section class="score-area">
         <p class="scores">Correct Answers <span id="score">0</span></p>
