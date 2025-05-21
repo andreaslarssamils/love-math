@@ -24,20 +24,31 @@ document.addEventListener('DOMContentLoaded', function () {
  */
 function runGame(gameType) {
   // Creates two random numbers between 1 and 25
-  let num1 = Math.floor(Math.random() * 25) + 1;
-  let num2 = Math.floor(Math.random() * 25) + 1;
+  let num1 = Math.floor(Math.random() * 25) + 1; // Random number between 1 and 25
+  let num2 = Math.floor(Math.random() * 25) + 1; // Random number between 1 and 25
 
   if (gameType === 'addition') {
-    displayAdditionQuestion(num1, num2);
+    displayAdditionQuestion(num1, num2); //
   } else {
-    alert(`Unknown game type: ${gameType}`);
-    throw `Unknown game type: ${gameType}. Aborting!`;
+    alert(`Unknown game type: ${gameType}`); // Alert the user if the game type is unknown
+    throw `Unknown game type: ${gameType}. Aborting!`; // Stop the game if the game type is unknown
   }
 }
 
 function checkAnswer() {}
 
-function calculateCorrectAnswer() {}
+function calculateCorrectAnswer() {
+  let operand1 = parseInt(document.getElementById('operand1').innerText); // Get the first operand
+  let operand2 = parseInt(document.getElementById('operand2').innerText); // Get the second operand
+  let operator = document.getElementById('operator').innerText; // Get the operator
+
+  if (operator === '+') {
+    return [operand1 + operand2, 'addition']; // Return the sum of the two operands
+  } else {
+    alert(`Unimplemented operator: ${operator}`);
+    throw `Unimplemented operator: ${operator}. Aborting!`;
+  }
+}
 
 function incrementScore() {}
 
