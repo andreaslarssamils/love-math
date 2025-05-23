@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         runGame(gameType);
       }
     });
-  }
+  } // Add event listeners to all buttons,
 
   document
     .getElementById('answer-box')
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (event.key === 'Enter') {
         checkAnswer();
       }
-    });
+    }); // Add event listener for the Enter key
 
-  runGame('addition');
+  runGame('addition'); // Start the game with addition
 });
 
 /**
@@ -135,11 +135,7 @@ function displayMultiplyQuestion(operand1, operand2) {
 }
 
 function displayDivisionQuestion(operand1, operand2) {
-  if (operand1 < operand2) {
-    return displayDivisionQuestion(operand2, operand1);
-  } else if (operand1 === operand2) {
-    return displayDivisionQuestion(operand1, operand2);
-  }
+  operand1 = operand1 * operand2;
   document.getElementById('operand1').textContent = operand1;
   document.getElementById('operand2').textContent = operand2;
   document.getElementById('operator').textContent = '/';
